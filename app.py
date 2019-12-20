@@ -1,5 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash
-import env as config
+import os
+# import env as config
+
 
 app = Flask(__name__)
 
@@ -53,5 +55,14 @@ def logout():
 def page_not_found(e):
     return render_template('404.html', title='Portfolio - 404'), 404
 
+
+
 if __name__ == '__main__':
-  app.run(debug=True)
+    app.run(host=os.environ.get('IP', "0.0.0.0"),
+            port=os.environ.get('PORT', "5000"),
+            debug=False)
+
+# Development only
+# app.run(host=os.environ.get('IP'),
+#         port=os.environ.get('PORT'),
+#         debug=True)
