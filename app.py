@@ -6,8 +6,10 @@ import os
 app = Flask(__name__)
 
 # app.config['SECRET_KEY'] = config.SECRET_KEY
-portfolio_username = config.portfolio_username
-portfolio_password = config.portfolio_password
+# portfolio_username = config.portfolio_username
+# portfolio_password = config.portfolio_password
+env_var = os.environ.get('portfolio_username')
+env_var = os.environ.get('portfolio_password')
 
 # Route for home page
 @app.route('/')
