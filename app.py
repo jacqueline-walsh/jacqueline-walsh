@@ -1,13 +1,16 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash
 import os
+# Development only
 # import env as config
 
 
 app = Flask(__name__)
 
+# Development only
 # app.config['SECRET_KEY'] = config.SECRET_KEY
 # portfolio_username = config.portfolio_username
 # portfolio_password = config.portfolio_password
+
 portfolio_username = os.environ.get('portfolio_username')
 portfolio_password = os.environ.get('portfolio_password')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
