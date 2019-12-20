@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = config.SECRET_KEY
-portfolio_username = config.portfolio_username
-portfolio_password = config.portfolio_password
+# app.config['SECRET_KEY'] = config.SECRET_KEY
+# portfolio_username = config.portfolio_username
+# portfolio_password = config.portfolio_password
 
 # Route for home page
 @app.route('/')
@@ -58,8 +58,8 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP', "0.0.0.0"),
-            port=os.environ.get('PORT', "5000"),
+    app.run(host=os.environ.get('IP'),
+            port=os.environ.get('PORT'),
             debug=False)
 
 # Development only
