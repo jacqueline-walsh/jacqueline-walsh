@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash
 import os
-# import env as config
+import env as config
 
 
 app = Flask(__name__)
