@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+<!-- main content block -->
+{% block content %}
+<div class="text-center">
+<h2>Sorry this page does not exist</h2>
+<h3>Please let me help you!</h3>
+  <div class="mt-4">
+    <a href="{{ url_for('index') }}"<button class="btn btn-dark mr-4 btn404">take me home</button></a>
+    <a href="{{ url_for('login') }}"<button class="btn btn-dark mr-4 btn404"> login </button></a>
+  </div>
+  <img src="https://jacqueline-walsh-portfolio.s3-eu-west-1.amazonaws.com/404.png" class="image_404" alt="404 page not found image" />
+
+</div>
+{% endblock content%}

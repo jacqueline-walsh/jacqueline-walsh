@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block index_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">  
+{% endblock index_css %}
+<!-- main content block -->
+{% block content %}
+
+<h1 class="mx-auto">Jacqueline Walsh - 
+  <span class="txt-type" data-wait="3000" data-words='["My Portfolio", "Developer", "Welcome"]'></span>
+</h1>
+{% endblock content %}
+

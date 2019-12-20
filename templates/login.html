@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+<!-- main content block -->
+{% block content %}
+<h2>Please login to view my curriculum vitae</h2>
+<br>
+<form method="POST" action="{{ url_for('login')}}">
+  <fieldset class="form-group">
+          <h1 class="text-center border-bottom mb-4">Log In</h1>
+          <br>
+      <!-- username input field with validation checks -->
+      <div class="form-group">
+          <label for="username">Username</label>              
+          <input id="username" name="username" type="text"  value="{{request.form.username}}" class="validate form-control">      
+      </div>
+      <!-- password input field with validation checks -->
+      <div class="form-group">
+              <label for="password">Password</label>              
+              <input id="password" name="password" type="password"  value="{{request.form.password}}"class="validate form-control">   
+          </div> 
+  </fieldset>
+  <!-- submit button -->
+  <div class="form-group">
+      <div class="row">
+          <button class="btn btn-dark" type="submit" name="action">submit</button>
+      </div>
+  </div> 
+</form>
+{% endblock content %}

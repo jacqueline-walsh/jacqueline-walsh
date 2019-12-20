@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img.logo {
+  width: 10%;
+  margin: -5px 15px;
+}
+
+.navbar-brand, .nav-link {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+footer {
+  flex: 0 0 50px;
+  margin-top: auto;
+  background-color: #333;
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+  padding: 50px;
+}
+
+/* social media */
+.fab {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.btn:hover {
+  box-shadow: 3px 3px 3px #666;
+  background-color: rgb(68, 68, 68);
+  border: 1px solid #000;
+}
+
+.btn404 {
+  width: 200px;
+  margin-top: 50px;
+}
+
+/* CV */
+
+hr {
+  margin-top: -.5rem;
+  border-top: 1px solid rgba(0,0,0,.5);
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+span.title {
+  margin-left: 30px
+}
+
+span.quals {
+  margin-left: 10px;
+}
+
+span.member {
+  margin-left: 15px;
+}
