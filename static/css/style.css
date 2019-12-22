@@ -46,6 +46,10 @@ footer {
   margin-top: 50px;
 }
 
+button[type=submit] {
+  margin-left: 15px;
+}
+
 /* CV */
 
 hr {

@@ -30,7 +30,10 @@
           </li>  
           <li {% if 'testimonials' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
             <a class="nav-link" href="{{ url_for('testimonials') }}">Testimonials</a>
-          </li>                  
+          </li>    
+          <li {% if 'contact' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+          </li>                            
           {% if session.username %}
           <li {% if 'cv' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
               <a class="nav-link" href="{{ url_for('cv') }}">CV</a>
