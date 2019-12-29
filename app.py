@@ -4,7 +4,7 @@ import imghdr
 from email.message import EmailMessage
 import os
 # Development only
-import env as config
+# import env as config
 
 
 app = Flask(__name__)
