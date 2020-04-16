@@ -11,6 +11,10 @@ img.logo {
   margin: -5px 15px;
 }
 
+.navbar-brand {
+  border-radius: 50%;
+}
+
 .navbar-brand, .nav-link {
   font-family: 'Raleway', sans-serif;
 }
