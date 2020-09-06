@@ -7,8 +7,9 @@ body {
 }
 
 img.logo {
-  width: 10%;
+  width: 7%;
   margin: -5px 15px;
+  border-radius: 50%;
 }
 
 .navbar-brand, .nav-link {
