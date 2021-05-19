@@ -56,7 +56,7 @@ def contact():
         subject = request.form['subject']
         message = request.form['message']
 
-        contacts = ['EMAIL_ADDRESS', 'test@example.com']
+        # contacts = ['EMAIL_ADDRESS', 'test@example.com']
 
         msg = EmailMessage()
         msg['Subject'] = subject
@@ -69,7 +69,8 @@ def contact():
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-            smtp.send_message(msg)
+            # smtp.send_message(msg)
+            smtp.sendmail(msg)
 
         flash(f'Thank you for contacting me, I will get back to you shortly', 'success')
     return render_template('contact.html', title='Jacqueline Walsh - Contact Me')
