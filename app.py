@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request, session, f
 import smtplib
 import imghdr
 from email.message import EmailMessage
-# import os
+import os
 # Development only
 # import env as config
 
