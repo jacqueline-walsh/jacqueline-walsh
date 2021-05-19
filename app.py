@@ -6,7 +6,6 @@ import os
 # Development only
 # import env as config
 
-
 app = Flask(__name__)
 
 # Development only
@@ -100,7 +99,6 @@ def logout():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', title='Portfolio - 404'), 404
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
