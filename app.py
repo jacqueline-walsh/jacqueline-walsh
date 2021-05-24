@@ -69,8 +69,8 @@ def contact():
 
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-            # smtp.send_message(msg)
-            smtp.sendmail(msg)
+            smtp.send_message(msg)
+            # smtp.sendmail(msg)
 
         flash(f'Thank you for contacting me, I will get back to you shortly', 'success')
     return render_template('contact.html', title='Jacqueline Walsh - Contact Me')
