@@ -6,7 +6,6 @@ import os
 # Development only
 # import env as config
 
-
 app = Flask(__name__)
 
 # Development only
@@ -57,7 +56,7 @@ def contact():
         subject = request.form['subject']
         message = request.form['message']
 
-        contacts = ['EMAIL_ADDRESS', 'test@example.com']
+        # contacts = ['EMAIL_ADDRESS', 'test@example.com']
 
         msg = EmailMessage()
         msg['Subject'] = subject
@@ -71,6 +70,7 @@ def contact():
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             smtp.send_message(msg)
+            # smtp.sendmail(msg)
 
         flash(f'Thank you for contacting me, I will get back to you shortly', 'success')
     return render_template('contact.html', title='Jacqueline Walsh - Contact Me')
@@ -100,7 +100,6 @@ def logout():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', title='Portfolio - 404'), 404
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
