@@ -57,7 +57,6 @@ def contact():
         message = request.form['message']
 
         # contacts = ['EMAIL_ADDRESS', 'test@example.com']
-
         msg = EmailMessage()
         msg['Subject'] = subject
         msg['From'] = email
